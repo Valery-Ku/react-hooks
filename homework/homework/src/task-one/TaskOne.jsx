@@ -9,7 +9,7 @@ function TaskOne() {
      * password - должен быть не меньше 5 символов и должен включать в себя цифры и спец символы (%$@ и т.д.)
      * confirmPassword - должен совпадать с password
      * */
-  /*  const [firstName, setFirstName] = useState('');
+/*  const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -99,16 +99,16 @@ function TaskOne() {
 export default TaskOne;
  */
 
-import React, { useState } from 'react';
-import './TaskOne.css';
+import React, { useState } from "react";
+import "./TaskOne.css";
 
 function useTaskOne() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
 
   const validate = () => {
     if (
@@ -120,10 +120,10 @@ function useTaskOne() {
       !/[!@#$%^&*(),.?":{}|<>%$]/.test(password) ||
       password !== confirmPassword
     ) {
-      setError('Ошибка валидации');
+      setError("Ошибка валидации");
       return false;
     }
-    setError('');
+    setError("");
     return true;
   };
 
@@ -172,11 +172,11 @@ function TaskOne() {
       )
     );
 
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+    setConfirmPassword("");
   };
 
   return (
